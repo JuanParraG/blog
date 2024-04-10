@@ -4,42 +4,36 @@ import Contacto from "../components/Contacto";
 import Header from "../components/Header";
 import Comentarios from "../components/Comentarios";
 
-import { Grid } from "@mui/material";
-import { Children } from "react";
+import { Grid, Paper} from "@mui/material";
 const Margin = () => (
         <Grid item xs={1}/>
   )
 function Home() {
     return (
-        <Grid   
-            container 
-            spacing={2} 
-            rowSpacing={1} 
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            justifyContent="space-evenly"
-            alignItems="center"
+        <Grid  
+        container
+        columnSpacing={5}
         >
             <Margin/>
-            <Grid item md={10}>
+            <Grid item md={10}  marginTop={5} marginBottom={3}>
                 <Header/>
             </Grid>
             <Margin/>
             <Margin/>
-            <Grid item md={7}>
+            <Grid item md={7} xs={10}>
                 <AcercaBlog/>
-            </Grid>
-            <Grid item md={3}>
-                <Contacto/>             
-            </Grid>
-            <Margin/>
-            <Margin/>
-            <Grid item md={7}>
                 <Carousel/>
             </Grid>
-            <Grid item md={3}>
-                <Comentarios/>            
-            </Grid>         
-            <Margin/>
+            
+            <Grid item md={3} gap={3} xs={10}>
+            <Paper elevation={10} padding={3} marginBottom={3}>
+                <Contacto/>             
+                <Comentarios/>      
+                </Paper>      
+            </Grid>
+            
+            
+            <Margin/>     
         </Grid>
     )
 }

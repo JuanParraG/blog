@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 function Header() {
     return (
         <header>
-            <Typography variant='h1'>El blog Sin Nombre</Typography>
+            <Typography variant='h2'>El blog Sin Nombre</Typography>
         </header>
     )
 }
