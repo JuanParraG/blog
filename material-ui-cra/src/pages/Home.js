@@ -20,15 +20,29 @@ function Home() {
             </Grid>
             <Margin/>
             <Margin/>
-            <Grid item md={7} xs={10}>
+            <Grid item 
+            md={6} 
+            xs={10} 
+            sx={{display:"flex",
+                flexDirection: "column",
+                gap: 10, }}>
                 <AcercaBlog/>
                 <Carousel/>
             </Grid>
             
-            <Grid item md={3} gap={3} xs={10}>
-            <Paper elevation={10} padding={3} marginBottom={3}>
-                <Contacto/>             
-                <Comentarios/>      
+            <Grid item md={4} gap={3} xs={10}>
+                <Contacto/>       
+            <Paper elevation={3} sx={{
+                padding: 2,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                marginTop: 3,
+                marginBottom: 3,
+                boxShadow: "0 0 5px rgb(85, 108, 214)"
+            }}>
+                      
+                <Comentarios/>  
                 </Paper>      
             </Grid>
             
